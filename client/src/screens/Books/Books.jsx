@@ -7,26 +7,26 @@ export default function Books(props) {
   return (
     <div className='books'>
       <ul className='col-1'>
-      <div className='page title'>
+        <div className='page title'>
         </div>
-        
-      <div className='create'>
-        <Link to='/books/new'><button>Create</button></Link>
+
+        <div className='create'>
+          <Link to='/books/new'><button>Create</button></Link>
         </div>
-        </ul>
+      </ul>
       <table>
-      <tbody className='collection'>
-      {
-        books.map(book => (
-          <tr key={book.id}>
-            <td>
-              <Link to={`/books/${book.id}`}><img className='img' src={book.image} alt={book.title} /></Link>
-              </td>
-          </tr>
-        ))
-        }
+        <tbody className='collection'>
+          {
+            books.map(book => (
+              <tr key={book.id}>
+                <td>
+                  <Link to={`/books/${book.id}`}><img className='img' src={book.image} alt={book.title} /></Link>
+                </td>
+              </tr>
+            ))
+          }
         </tbody>
-        </table>
+      </table>
     </div>
   )
 }
